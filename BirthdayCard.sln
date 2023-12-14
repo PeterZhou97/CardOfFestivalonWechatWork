@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayCard", "BirthdayCard.csproj", "{0F965376-7F12-49AD-96BC-97A771E82675}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44DF83AE-1D1D-4196-B2CA-3503BA4F1B5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LZX_SQL", "..\LZX_SQL\LZX_SQL.csproj", "{DFD38743-E55C-40E4-A136-345C947E9B5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F965376-7F12-49AD-96BC-97A771E82675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F965376-7F12-49AD-96BC-97A771E82675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F965376-7F12-49AD-96BC-97A771E82675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F965376-7F12-49AD-96BC-97A771E82675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD38743-E55C-40E4-A136-345C947E9B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD38743-E55C-40E4-A136-345C947E9B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD38743-E55C-40E4-A136-345C947E9B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD38743-E55C-40E4-A136-345C947E9B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {340DFC90-8EEE-4818-9E24-4D542FC3E85F}
+	EndGlobalSection
+EndGlobal

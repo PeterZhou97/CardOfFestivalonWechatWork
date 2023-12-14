@@ -1,0 +1,698 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F965376-7F12-49AD-96BC-97A771E82675}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BirthdayCard</RootNamespace>
+    <AssemblyName>BirthdayCard</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44339</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>packages\AWSSDK.Core.3.5.1.56\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Eureka.ESB.Client">
+      <HintPath>..\微信类库\Bin\Eureka.ESB.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\微信类库\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.Weixin">
+      <HintPath>..\微信类库\Bin\Senparc.Weixin.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.Weixin.MP">
+      <HintPath>..\微信类库\Bin\Senparc.Weixin.MP.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.Weixin.MP.MvcExtension">
+      <HintPath>..\微信类库\Bin\Senparc.Weixin.MP.MvcExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.Weixin.QY">
+      <HintPath>..\微信类库\Bin\Senparc.Weixin.QY.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="uiautomationprovider" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArmyDayCard.aspx" />
+    <Content Include="AutoMessage.aspx" />
+    <Content Include="background\1.fw.png" />
+    <Content Include="background\10.fw.png" />
+    <Content Include="background\11.fw.png" />
+    <Content Include="background\12.fw.png" />
+    <Content Include="background\2.fw.png" />
+    <Content Include="background\3.fw.png" />
+    <Content Include="background\4.fw.png" />
+    <Content Include="background\5.fw.png" />
+    <Content Include="background\6.fw.png" />
+    <Content Include="background\7.fw.png" />
+    <Content Include="background\8.fw.png" />
+    <Content Include="background\9.fw.png" />
+    <Content Include="bin\BirthdayCard.dll" />
+    <Content Include="bin\BirthdayCard.pdb" />
+    <Content Include="bin\Eureka.ESB.Client.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.VisualStudio.Web.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.Globalization.Calendars.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Net.Http.dll" />
+    <Content Include="bin\roslyn\System.Net.Sockets.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\Senparc.Weixin.dll" />
+    <Content Include="bin\Senparc.Weixin.MP.dll" />
+    <Content Include="bin\Senparc.Weixin.MP.MvcExtension.dll" />
+    <Content Include="bin\Senparc.Weixin.MP.MvcExtension.xml" />
+    <Content Include="bin\Senparc.Weixin.MP.xml" />
+    <Content Include="bin\Senparc.Weixin.QY.dll" />
+    <Content Include="bin\Senparc.Weixin.QY.xml" />
+    <Content Include="bin\Senparc.Weixin.xml" />
+    <Content Include="ChildrenCard.aspx" />
+    <Content Include="ChristmasCard.aspx" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\weeklyCalendar.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Double7thDayCard.aspx" />
+    <Content Include="Double9thDayCard.aspx" />
+    <Content Include="DragonFestivalCard.aspx" />
+    <Content Include="FatherDayCard.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HalloweenCard.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="js\AdMove.js" />
+    <Content Include="js\birthday.js" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.time.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="js\testData.js" />
+    <Content Include="js\util.js" />
+    <Content Include="js\weeklyCalendar.js" />
+    <Content Include="LaborDayCard.aspx" />
+    <Content Include="LanternFestivalCard.aspx" />
+    <Content Include="media\armyday\1.png" />
+    <Content Include="media\armyday\2.png" />
+    <Content Include="media\armyday\3.png" />
+    <Content Include="media\armyday\4.png" />
+    <Content Include="media\armyday\5.png" />
+    <Content Include="media\armyday\6.png" />
+    <Content Include="media\armyday\7.png" />
+    <Content Include="media\armyday\8.png" />
+    <Content Include="media\childrenday\1.fw.png" />
+    <Content Include="media\childrenday\2.fw.png" />
+    <Content Include="media\childrenday\3.fw.png" />
+    <Content Include="media\childrenday\4.fw.png" />
+    <Content Include="media\childrenday\5.fw.png" />
+    <Content Include="media\childrenday\6.fw.png" />
+    <Content Include="media\Christmas\1.fw.png" />
+    <Content Include="media\Christmas\10.fw.png" />
+    <Content Include="media\Christmas\11.fw.png" />
+    <Content Include="media\Christmas\12.fw.png" />
+    <Content Include="media\Christmas\2.fw.png" />
+    <Content Include="media\Christmas\3.fw.png" />
+    <Content Include="media\Christmas\4.fw.png" />
+    <Content Include="media\Christmas\5.fw.png" />
+    <Content Include="media\Christmas\6.fw.png" />
+    <Content Include="media\Christmas\7.fw.png" />
+    <Content Include="media\Christmas\8.fw.png" />
+    <Content Include="media\Christmas\9.fw.png" />
+    <Content Include="media\DoctorDay\1.jpg" />
+    <Content Include="media\DoctorDay\10.jpg" />
+    <Content Include="media\DoctorDay\11.jpg" />
+    <Content Include="media\DoctorDay\12.jpg" />
+    <Content Include="media\DoctorDay\13.jpg" />
+    <Content Include="media\DoctorDay\14.jpg" />
+    <Content Include="media\DoctorDay\15.jpg" />
+    <Content Include="media\DoctorDay\16.jpg" />
+    <Content Include="media\DoctorDay\17.jpg" />
+    <Content Include="media\DoctorDay\18.jpg" />
+    <Content Include="media\DoctorDay\19.jpg" />
+    <Content Include="media\DoctorDay\2.jpg" />
+    <Content Include="media\DoctorDay\20.jpg" />
+    <Content Include="media\DoctorDay\3.jpg" />
+    <Content Include="media\DoctorDay\4.jpg" />
+    <Content Include="media\DoctorDay\5.jpg" />
+    <Content Include="media\DoctorDay\6.jpg" />
+    <Content Include="media\DoctorDay\7.jpg" />
+    <Content Include="media\DoctorDay\8.jpg" />
+    <Content Include="media\DoctorDay\9.jpg" />
+    <Content Include="media\Double7thday\1.fw.png" />
+    <Content Include="media\Double7thday\2.fw.png" />
+    <Content Include="media\Double7thday\3.fw.png" />
+    <Content Include="media\Double7thday\4.fw.png" />
+    <Content Include="media\Double7thday\5.fw.png" />
+    <Content Include="media\Double7thday\6.fw.png" />
+    <Content Include="media\Double7thday\7.fw.png" />
+    <Content Include="media\DoubleNinthDay\1.jpg" />
+    <Content Include="media\DoubleNinthDay\2.jpg" />
+    <Content Include="media\DoubleNinthDay\3.jpg" />
+    <Content Include="media\DoubleNinthDay\4.jpg" />
+    <Content Include="media\DoubleNinthDay\5.jpg" />
+    <Content Include="media\DoubleNinthDay\6.jpg" />
+    <Content Include="media\DoubleNinthDay\7.jpg" />
+    <Content Include="media\DoubleNinthDay\8.jpg" />
+    <Content Include="media\DoubleNinthDay\9.jpg" />
+    <Content Include="media\DragonBoatFestival\1.fw.png" />
+    <Content Include="media\DragonBoatFestival\2.fw.png" />
+    <Content Include="media\DragonBoatFestival\3.fw.png" />
+    <Content Include="media\DragonBoatFestival\4.fw.png" />
+    <Content Include="media\DragonBoatFestival\5.fw.png" />
+    <Content Include="media\DragonBoatFestival\6.fw.png" />
+    <Content Include="media\DragonBoatFestival\7.fw.png" />
+    <Content Include="media\FatherDay\1.jpg" />
+    <Content Include="media\FatherDay\2.jpg" />
+    <Content Include="media\FatherDay\3.jpg" />
+    <Content Include="media\FatherDay\4.jpg" />
+    <Content Include="media\FatherDay\5.jpg" />
+    <Content Include="media\FatherDay\6.jpg" />
+    <Content Include="media\Halloween\1.fw.png" />
+    <Content Include="media\Halloween\2.fw.png" />
+    <Content Include="media\Halloween\3.fw.png" />
+    <Content Include="media\Halloween\4.fw.png" />
+    <Content Include="media\Halloween\5.fw.png" />
+    <Content Include="media\Halloween\6.fw.png" />
+    <Content Include="media\Halloween\7.fw.png" />
+    <Content Include="media\Halloween\8.fw.png" />
+    <Content Include="media\laborday\1.png" />
+    <Content Include="media\laborday\2.png" />
+    <Content Include="media\laborday\3.png" />
+    <Content Include="media\laborday\4.png" />
+    <Content Include="media\laborday\5.png" />
+    <Content Include="media\LanternFestival\1.fw.png" />
+    <Content Include="media\LanternFestival\10.fw.png" />
+    <Content Include="media\LanternFestival\2.fw.png" />
+    <Content Include="media\LanternFestival\3.fw.png" />
+    <Content Include="media\LanternFestival\4.fw.png" />
+    <Content Include="media\LanternFestival\5.fw.png" />
+    <Content Include="media\LanternFestival\6.fw.png" />
+    <Content Include="media\LanternFestival\7.fw.png" />
+    <Content Include="media\LanternFestival\8.fw.png" />
+    <Content Include="media\LanternFestival\9.fw.png" />
+    <Content Include="media\MidAutumnFestival\1.fw.png" />
+    <Content Include="media\MidAutumnFestival\10.fw.png" />
+    <Content Include="media\MidAutumnFestival\11.fw.png" />
+    <Content Include="media\MidAutumnFestival\12.fw.png" />
+    <Content Include="media\MidAutumnFestival\13.fw.png" />
+    <Content Include="media\MidAutumnFestival\14.fw.png" />
+    <Content Include="media\MidAutumnFestival\15.fw.png" />
+    <Content Include="media\MidAutumnFestival\2.fw.png" />
+    <Content Include="media\MidAutumnFestival\3.fw.png" />
+    <Content Include="media\MidAutumnFestival\4.fw.png" />
+    <Content Include="media\MidAutumnFestival\5.fw.png" />
+    <Content Include="media\MidAutumnFestival\6.fw.png" />
+    <Content Include="media\MidAutumnFestival\7.fw.png" />
+    <Content Include="media\MidAutumnFestival\8.fw.png" />
+    <Content Include="media\MidAutumnFestival\9.fw.png" />
+    <Content Include="media\motherday\1.jpg" />
+    <Content Include="media\motherday\2.jpg" />
+    <Content Include="media\motherday\3.jpg" />
+    <Content Include="media\motherday\4.jpg" />
+    <Content Include="media\motherday\5.jpg" />
+    <Content Include="media\NationalDay\1.jpg" />
+    <Content Include="media\NationalDay\10.jpg" />
+    <Content Include="media\NationalDay\2.jpg" />
+    <Content Include="media\NationalDay\3.jpg" />
+    <Content Include="media\NationalDay\4.jpg" />
+    <Content Include="media\NationalDay\5.jpg" />
+    <Content Include="media\NationalDay\6.jpg" />
+    <Content Include="media\NationalDay\7.jpg" />
+    <Content Include="media\NationalDay\8.jpg" />
+    <Content Include="media\NationalDay\9.jpg" />
+    <Content Include="media\newyear\1.fw.png" />
+    <Content Include="media\newyear\10.fw.png" />
+    <Content Include="media\newyear\2.fw.png" />
+    <Content Include="media\newyear\3.fw.png" />
+    <Content Include="media\newyear\4.fw.png" />
+    <Content Include="media\newyear\5.fw.png" />
+    <Content Include="media\newyear\6.fw.png" />
+    <Content Include="media\newyear\7.fw.png" />
+    <Content Include="media\newyear\8.fw.png" />
+    <Content Include="media\newyear\9.fw.png" />
+    <Content Include="media\NurseDay\1.jpg" />
+    <Content Include="media\NurseDay\10.jpg" />
+    <Content Include="media\NurseDay\11.jpg" />
+    <Content Include="media\NurseDay\12.jpg" />
+    <Content Include="media\NurseDay\2.jpg" />
+    <Content Include="media\NurseDay\3.jpg" />
+    <Content Include="media\NurseDay\4.jpg" />
+    <Content Include="media\NurseDay\5.jpg" />
+    <Content Include="media\NurseDay\6.jpg" />
+    <Content Include="media\NurseDay\7.jpg" />
+    <Content Include="media\NurseDay\8.jpg" />
+    <Content Include="media\NurseDay\9.jpg" />
+    <Content Include="media\PartyBirthday\1.png" />
+    <Content Include="media\PartyBirthday\2.png" />
+    <Content Include="media\PartyBirthday\3.png" />
+    <Content Include="media\PartyBirthday\4.png" />
+    <Content Include="media\PartyBirthday\5.png" />
+    <Content Include="media\PartyBirthday\6.png" />
+    <Content Include="media\PartyBirthday\7.png" />
+    <Content Include="media\plantingtreeday\1.jpg" />
+    <Content Include="media\plantingtreeday\2.jpg" />
+    <Content Include="media\plantingtreeday\3.jpg" />
+    <Content Include="media\plantingtreeday\4.jpg" />
+    <Content Include="media\plantingtreeday\5.jpg" />
+    <Content Include="media\SpringFestival\1.fw.png" />
+    <Content Include="media\SpringFestival\2.fw.png" />
+    <Content Include="media\SpringFestival\3.fw.png" />
+    <Content Include="media\SpringFestival\4.fw.png" />
+    <Content Include="media\SpringFestival\5.fw.png" />
+    <Content Include="media\SpringFestival\6.fw.png" />
+    <Content Include="media\SpringFestival\7.fw.png" />
+    <Content Include="media\SpringFestival\8.fw.png" />
+    <Content Include="media\SpringFestival\9.fw.png" />
+    <Content Include="media\TeachersDay\1.fw.png" />
+    <Content Include="media\TeachersDay\2.fw.png" />
+    <Content Include="media\TeachersDay\3.fw.png" />
+    <Content Include="media\TeachersDay\4.fw.png" />
+    <Content Include="media\TeachersDay\5.fw.png" />
+    <Content Include="media\TeachersDay\6.fw.png" />
+    <Content Include="media\TeachersDay\7.fw.png" />
+    <Content Include="media\TeachersDay\8.fw.png" />
+    <Content Include="media\TeachersDay\9.fw.png" />
+    <Content Include="media\ThanksgivingDay\1.jpg" />
+    <Content Include="media\ThanksgivingDay\2.jpg" />
+    <Content Include="media\ThanksgivingDay\3.jpg" />
+    <Content Include="media\ThanksgivingDay\4.jpg" />
+    <Content Include="media\ThanksgivingDay\5.jpg" />
+    <Content Include="media\womenday\1.fw.png" />
+    <Content Include="media\womenday\2.fw.png" />
+    <Content Include="media\womenday\3.fw.png" />
+    <Content Include="media\womenday\4.fw.png" />
+    <Content Include="media\womenday\5.fw.png" />
+    <Content Include="media\womenday\6.fw.png" />
+    <Content Include="media\youthday\1.jpg" />
+    <Content Include="media\youthday\2.jpg" />
+    <Content Include="media\youthday\3.jpg" />
+    <Content Include="media\youthday\4.jpg" />
+    <Content Include="MidAutumnCard.aspx" />
+    <Content Include="MobileCard.aspx" />
+    <Content Include="MotherDayCard.aspx" />
+    <Content Include="NationalDayCard.aspx" />
+    <Content Include="NewYearDayCard.aspx" />
+    <Content Include="NurseDayCard.aspx" />
+    <Content Include="PartyBirthdayCard.aspx" />
+    <Content Include="PlantingTreeDayCard.aspx" />
+    <Content Include="SpringFestivalCard.aspx" />
+    <Content Include="TeachersDayCard.aspx" />
+    <Content Include="ThanksgivingDayCard.aspx" />
+    <Content Include="UserMessage.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="DoctorDayCard.aspx" />
+    <Content Include="WomenDayCard.aspx" />
+    <Content Include="YouthDayCard.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArmyDayCard.aspx.cs">
+      <DependentUpon>ArmyDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArmyDayCard.aspx.designer.cs">
+      <DependentUpon>ArmyDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoMessage.aspx.cs">
+      <DependentUpon>AutoMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoMessage.aspx.designer.cs">
+      <DependentUpon>AutoMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenCard.aspx.cs">
+      <DependentUpon>ChildrenCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChildrenCard.aspx.designer.cs">
+      <DependentUpon>ChildrenCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChristmasCard.aspx.cs">
+      <DependentUpon>ChristmasCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChristmasCard.aspx.designer.cs">
+      <DependentUpon>ChristmasCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CZ_INDEX_INFO.cs" />
+    <Compile Include="Double7thDayCard.aspx.cs">
+      <DependentUpon>Double7thDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Double7thDayCard.aspx.designer.cs">
+      <DependentUpon>Double7thDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Double9thDayCard.aspx.cs">
+      <DependentUpon>Double9thDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Double9thDayCard.aspx.designer.cs">
+      <DependentUpon>Double9thDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DragonFestivalCard.aspx.cs">
+      <DependentUpon>DragonFestivalCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DragonFestivalCard.aspx.designer.cs">
+      <DependentUpon>DragonFestivalCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FatherDayCard.aspx.cs">
+      <DependentUpon>FatherDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FatherDayCard.aspx.designer.cs">
+      <DependentUpon>FatherDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HalloweenCard.aspx.cs">
+      <DependentUpon>HalloweenCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HalloweenCard.aspx.designer.cs">
+      <DependentUpon>HalloweenCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HttpRequestUtil.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IPSearch.cs" />
+    <Compile Include="LaborDayCard.aspx.cs">
+      <DependentUpon>LaborDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaborDayCard.aspx.designer.cs">
+      <DependentUpon>LaborDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LanternFestivalCard.aspx.cs">
+      <DependentUpon>LanternFestivalCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LanternFestivalCard.aspx.designer.cs">
+      <DependentUpon>LanternFestivalCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MidAutumnCard.aspx.cs">
+      <DependentUpon>MidAutumnCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MidAutumnCard.aspx.designer.cs">
+      <DependentUpon>MidAutumnCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileCard.aspx.cs">
+      <DependentUpon>MobileCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileCard.aspx.designer.cs">
+      <DependentUpon>MobileCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MotherDayCard.aspx.cs">
+      <DependentUpon>MotherDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MotherDayCard.aspx.designer.cs">
+      <DependentUpon>MotherDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyUtility.cs" />
+    <Compile Include="NationalDayCard.aspx.cs">
+      <DependentUpon>NationalDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NationalDayCard.aspx.designer.cs">
+      <DependentUpon>NationalDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewYearDayCard.aspx.cs">
+      <DependentUpon>NewYearDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewYearDayCard.aspx.designer.cs">
+      <DependentUpon>NewYearDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NurseDayCard.aspx.cs">
+      <DependentUpon>NurseDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NurseDayCard.aspx.designer.cs">
+      <DependentUpon>NurseDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PartyBirthdayCard.aspx.cs">
+      <DependentUpon>PartyBirthdayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PartyBirthdayCard.aspx.designer.cs">
+      <DependentUpon>PartyBirthdayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PHCZIP.cs" />
+    <Compile Include="PlantingTreeDayCard.aspx.cs">
+      <DependentUpon>PlantingTreeDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantingTreeDayCard.aspx.designer.cs">
+      <DependentUpon>PlantingTreeDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpringFestivalCard.aspx.cs">
+      <DependentUpon>SpringFestivalCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpringFestivalCard.aspx.designer.cs">
+      <DependentUpon>SpringFestivalCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="TeachersDayCard.aspx.cs">
+      <DependentUpon>TeachersDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeachersDayCard.aspx.designer.cs">
+      <DependentUpon>TeachersDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThanksgivingDayCard.aspx.cs">
+      <DependentUpon>ThanksgivingDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThanksgivingDayCard.aspx.designer.cs">
+      <DependentUpon>ThanksgivingDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeHelper.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="TWeixinHelper.cs" />
+    <Compile Include="DoctorDayCard.aspx.cs">
+      <DependentUpon>DoctorDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorDayCard.aspx.designer.cs">
+      <DependentUpon>DoctorDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMessage.aspx.cs">
+      <DependentUpon>UserMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMessage.aspx.designer.cs">
+      <DependentUpon>UserMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeekHoliday.cs" />
+    <Compile Include="WomenDayCard.aspx.cs">
+      <DependentUpon>WomenDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WomenDayCard.aspx.designer.cs">
+      <DependentUpon>WomenDayCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YouthDayCard.aspx.cs">
+      <DependentUpon>YouthDayCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YouthDayCard.aspx.designer.cs">
+      <DependentUpon>YouthDayCard.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js.map" />
+    <Content Include="bin\BirthdayCard.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\App_LocalResources\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LZX_SQL\LZX_SQL.csproj">
+      <Project>{dfd38743-e55c-40e4-a136-345c947e9b5e}</Project>
+      <Name>LZX_SQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58879</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44339/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
