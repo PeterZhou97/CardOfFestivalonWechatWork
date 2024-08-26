@@ -112,7 +112,7 @@ namespace WeiPay
         public static void CelebrationForNewYear()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -135,7 +135,7 @@ namespace WeiPay
         public static void CelebrationForSpringFestival()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -159,7 +159,7 @@ namespace WeiPay
         public static void CelebrationForLanternFestival()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -183,7 +183,7 @@ namespace WeiPay
         public static void CelebrationForWomen()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -207,7 +207,7 @@ namespace WeiPay
         public static void CelebrationForPlantingTreeDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -231,7 +231,7 @@ namespace WeiPay
         public static void CelebrationForLaborDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -255,7 +255,7 @@ namespace WeiPay
         public static void CelebrationForYouthDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -279,7 +279,7 @@ namespace WeiPay
         public static void CelebrationForMothers()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -303,7 +303,7 @@ namespace WeiPay
         //public static void CelebrateEmpBirthday(string userid, string username)
         //{
         //    //1. 获取accessToken
-        //    string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+        //    string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
         //    //2. 获取taglist（标签列表）
         //    GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -332,7 +332,7 @@ namespace WeiPay
         public static void CelebrationToChildren2()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -355,7 +355,7 @@ namespace WeiPay
         //public static void CelebrationToChildren(string userid,string username)
         //{
         //    //1. 获取accessToken
-        //    string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+        //    string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
         //    //2. 获取taglist（标签列表）
         //    GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -381,7 +381,7 @@ namespace WeiPay
         public static void CelebrateEmpBirthday2()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -410,7 +410,7 @@ namespace WeiPay
         public static void CelebrationToNurses()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -434,7 +434,7 @@ namespace WeiPay
         public static void CelebrationForDragonFestival()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -457,7 +457,7 @@ namespace WeiPay
         public static void CelebrateForFathers()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -480,7 +480,7 @@ namespace WeiPay
         public static void CelebrationForPartyBirthday()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -504,7 +504,7 @@ namespace WeiPay
         public static void CelebrationForArmyDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -528,7 +528,7 @@ namespace WeiPay
         public static void CelebrationForDouble7thDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -552,7 +552,7 @@ namespace WeiPay
         public static void CelebrationToDoctors()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -576,7 +576,7 @@ namespace WeiPay
         public static void CelebrationForTeachersDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -600,7 +600,7 @@ namespace WeiPay
         public static void CelebrationForMidAutumnFestival()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -624,7 +624,7 @@ namespace WeiPay
         public static void CelebrationForNationalDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -647,7 +647,7 @@ namespace WeiPay
         public static void CelebrationForDouble9thDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -671,7 +671,7 @@ namespace WeiPay
         public static void CelebrationForHalloween()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -693,7 +693,7 @@ namespace WeiPay
         public static void CelebrationForThanksgivingDay()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
@@ -716,7 +716,7 @@ namespace WeiPay
         public static void CelebrationForChristmas()
         {
             //1. 获取accessToken
-            string accesstoken = AccessTokenContainer.TryGetToken("ww18af6aae84975571", "rEggq1XBKskn8KYzcmqwcOT7Kotwpq-sH6vjYBHOybg");
+            string accesstoken = AccessTokenContainer.TryGetToken("Your WeixinWork AppID", "Your WeixinWork Corscret");
 
             //2. 获取taglist（标签列表）
             GetTagListResult tagList = MailListApi.GetTagList(accesstoken);
