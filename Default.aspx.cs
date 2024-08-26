@@ -27,10 +27,8 @@ namespace BirthdayCard
             {
                 string code = Request.QueryString["code"];
                 //你的回发地址
-                //string corpid = "ww18af6aae84975571";
-                //string corpsecret = "weQWl6X4fYpS6hBJGhoFZhf_6xr1hjR9LrNYKRkAvfg";
-                string appid = "ww18af6aae84975571";
-                string redirect_uri = "https://dx.rjlwh.com.cn:443";
+                string appid = "Your WeixinWork appid";
+                string redirect_uri = "Your Redirect URI";
                 if (string.IsNullOrEmpty(code))
                 {
                     string code_url = string.Format("https://open.weixin.qq.com/connect/oauth2/authorize?appid={0}&redirect_uri={1}&response_type=code&scope=SCOPE&agentid=agentid&state=STATE#wechat_redirect  ", appid, redirect_uri);
